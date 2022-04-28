@@ -175,6 +175,7 @@ const Home = (): JSX.Element => {
               </li>
             )
           }
+          return '';
         })}
       </PizzaList>
       <DrinkContainer>
@@ -203,6 +204,7 @@ const Home = (): JSX.Element => {
                 </DrinkContainerDiv>
               )
             }
+            return ''
           })}
 
         </div>
