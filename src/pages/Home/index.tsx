@@ -130,7 +130,7 @@ const Home = (): JSX.Element => {
   return (
     <>
       <PizzaList>
-        {mockProducts.map(product => {
+        {products.map(product => {
           if (product.category === 'pizza') {
             return (
               <li key={product.id}>
@@ -181,13 +181,13 @@ const Home = (): JSX.Element => {
         <p style={{ padding: '10px', fontSize: 18 }}>{'Destilados & Drinks'}</p>
 
         <div style={{ display: 'flex' }}>
-          {mockProducts.map(product => {
+          {products.map(product => {
             if (product.category === 'bebida') {
               return (
                 <DrinkContainerDiv>
                   <img src={guarana} alt={product.title} width="80" height="80" />
                   <strong>{product.title}</strong>
-                  <span>R$ {product.price}</span>
+                  <span>{product.priceFormatted}</span>
                   <button
                     type="button"
                     data-testid="add-product-button"
